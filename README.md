@@ -16,16 +16,22 @@ using the TMDB API).
 
 - Multi-page site: Home, About, Contact, and a Blog section
 - Nested blog routes: `/blog/frontend`, `/blog/backend`, `/blog/mobile`
-- Reusable, responsive navigation bar (with mobile hamburger menu) and footer
+- Reusable, responsive navigation bar (with mobile hamburger menu, active-link
+  indicator, and gradient logo) and footer
 - Shared root layout (nav + footer + global font + global colors) applied to
   every page automatically
-- Nested blog layout (header + sidebar) applied only within `/blog/*`
+- Nested blog layout (sidebar + content area) applied only within `/blog/*`
+- **Advanced hero sections** — every page has its own `Hero` with a distinct
+  gradient background, decorative blurred blobs, an eyebrow badge, and CTA
+  buttons
+- **Three-column content sections** used across pages (focus areas, blog
+  categories, key takeaways, and contact channels)
 - Unique SEO metadata (title + description) on every page
 - Global styling via Google Font (Poppins) and CSS custom properties for
-  primary/secondary colors
+  primary/secondary colors, plus a soft radial background and fade-up animation
 - Fully responsive (mobile, tablet, desktop) using Tailwind CSS
-- Bonus: custom 404 page, a loading state for the blog section, and a
-  reusable `Button` component used across the site
+- Bonus: custom 404 page, a loading state for the blog section, and reusable
+  `Button` (primary / secondary / outline) and `Hero` components
 
 ## Technologies Used
 
@@ -66,27 +72,28 @@ my-learning-journey/
 │   ├── app/
 │   │   ├── layout.tsx          # Root layout: nav, footer, font, colors
 │   │   ├── page.tsx             # Home page (/)
-│   │   ├── globals.css          # Global styles + Tailwind import
+│   │   ├── globals.css          # Global styles + Tailwind import + animation
 │   │   ├── not-found.tsx        # Custom 404 page (bonus)
 │   │   ├── about/
-│   │   │   └── page.tsx         # About page (/about)
+│   │   │   └── page.tsx         # About page (/about) with hero + 3-col focus
 │   │   ├── contact/
-│   │   │   └── page.tsx         # Contact page (/contact)
+│   │   │   └── page.tsx         # Contact page (/contact) with hero + form + 3-col
 │   │   └── blog/
-│   │       ├── layout.tsx       # Nested blog layout: header + sidebar
-│   │       ├── page.tsx         # Blog landing page (/blog)
+│   │       ├── layout.tsx       # Nested blog layout: sidebar + content
+│   │       ├── page.tsx         # Blog landing page (/blog) with hero + 3-col
 │   │       ├── loading.tsx      # Loading state for blog section (bonus)
 │   │       ├── frontend/
-│   │       │   └── page.tsx     # /blog/frontend
+│   │       │   └── page.tsx     # /blog/frontend with hero + 3-col takeaways
 │   │       ├── backend/
-│   │       │   └── page.tsx     # /blog/backend
+│   │       │   └── page.tsx     # /blog/backend with hero + 3-col takeaways
 │   │       └── mobile/
-│   │           └── page.tsx     # /blog/mobile
+│   │           └── page.tsx     # /blog/mobile with hero + 3-col takeaways
 │   └── components/
-│       ├── Navbar.tsx           # Reusable responsive nav bar
+│       ├── Navbar.tsx           # Reusable responsive nav bar (active link)
 │       ├── Footer.tsx           # Reusable footer
 │       ├── BlogSidebar.tsx      # Sidebar for blog section
-│       └── Button.tsx           # Reusable button component (bonus)
+│       └── Button.tsx           # Reusable button (primary/secondary/outline)
+│   │       └── Hero.tsx             # Reusable hero section with themed backgrounds
 ├── public/                      # Static assets
 ├── next.config.ts
 ├── tailwind.config / postcss.config.mjs

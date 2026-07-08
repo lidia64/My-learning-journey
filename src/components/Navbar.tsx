@@ -23,7 +23,7 @@ export default function Navbar() {
       <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-4 sm:px-6">
         <Link
           href="/"
-          className="bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-secondary)] bg-clip-text text-lg font-bold text-transparent"
+          className="text-lg font-bold text-[var(--color-primary)]"
           onClick={() => setOpen(false)}
         >
           My Learning Journey

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Button from "@/components/Button";
+import Hero from "@/components/Hero";
 
 export const metadata: Metadata = {
   title: "Home",
@@ -76,36 +77,16 @@ const tracks: Track[] = [
 export default function Home() {
   return (
     <div className="space-y-16">
-      <section className="relative isolate overflow-hidden rounded-3xl bg-gradient-to-br from-[var(--color-primary)]/5 via-white to-[var(--color-secondary)]/10 px-6 py-16 text-center shadow-sm ring-1 ring-black/5 sm:py-24">
-        <div
-          aria-hidden
-          className="absolute -top-24 -left-24 h-64 w-64 rounded-full bg-[var(--color-primary)]/20 blur-3xl"
-        />
-        <div
-          aria-hidden
-          className="absolute -bottom-24 -right-24 h-64 w-64 rounded-full bg-[var(--color-secondary)]/20 blur-3xl"
-        />
-
-        <div className="relative animate-fade-up">
-          <span className="inline-block rounded-full bg-white/70 px-4 py-1 text-xs font-medium uppercase tracking-wider text-[var(--color-primary)] ring-1 ring-[var(--color-primary)]/15">
-            My Learning Journey
-          </span>
-          <h1 className="mt-6 text-4xl font-bold text-[var(--color-primary)] sm:text-5xl">
-            Hi, I&apos;m Lidia 👋
-          </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-            I&apos;m learning full-stack web development — React, TypeScript,
-            and Next.js — one project at a time. This site documents that
-            journey.
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <Button href="/about">About Me</Button>
-            <Button href="/blog" variant="secondary">
-              Read My Blog
-            </Button>
-          </div>
-        </div>
-      </section>
+      <Hero
+        eyebrow="My Learning Journey"
+        title="Hi, I'm Lidia 👋"
+        subtitle="I'm learning full-stack web development — React, TypeScript, and Next.js — one project at a time. This site documents that journey."
+      >
+        <Button href="/about">About Me</Button>
+        <Button href="/blog" variant="secondary">
+          Read My Blog
+        </Button>
+      </Hero>
 
       <section className="grid gap-6 sm:grid-cols-3">
         {tracks.map((track) => (
