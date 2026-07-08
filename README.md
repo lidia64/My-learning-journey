@@ -1,5 +1,8 @@
 # My Learning Journey
 link : https://my-learning-journey-lemon.vercel.app/
+
+
+
 A simple multi-page personal website built to practice the fundamentals of the
 **Next.js App Router** — routing, shared and nested layouts, global styling,
 and per-page SEO metadata.
