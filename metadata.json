@@ -1,0 +1,6 @@
+{
+  "name": "My Learning Journey",
+  "description": "A personal site tracking my journey learning web development with React, TypeScript, and Next.js.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

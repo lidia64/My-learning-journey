@@ -82,8 +82,11 @@ export default function Home() {
         title="Hi, I'm Lidia 👋"
         subtitle="I'm learning full-stack web development — React, TypeScript, and Next.js — one project at a time. This site documents that journey."
       >
-        <Button href="/about">About Me</Button>
-        <Button href="/blog" variant="secondary">
+        <Button href="/stories">Explore Story Hub</Button>
+        <Button href="/about" variant="secondary">
+          About Me
+        </Button>
+        <Button href="/blog" variant="outline">
           Read My Blog
         </Button>
       </Hero>
@@ -103,6 +106,27 @@ export default function Home() {
             <p className="mt-2 text-sm text-gray-600">{track.description}</p>
           </div>
         ))}
+      </section>
+
+      {/* Dynamic Features CTA Panel */}
+      <section className="rounded-3xl border border-gray-200 bg-gradient-to-br from-white/90 to-gray-50/50 p-8 shadow-sm backdrop-blur md:p-12">
+        <div className="mx-auto max-w-2xl text-center space-y-4">
+          <div className="inline-flex rounded-full bg-[var(--color-primary)]/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-[var(--color-primary)]">
+            New Feature Built
+          </div>
+          <h2 className="text-2xl font-extrabold tracking-tight text-gray-900 sm:text-3xl">
+            Interactive Story Management
+          </h2>
+          <p className="text-base text-gray-600">
+            I built a complete full-stack Story Hub connected to a remote Express API backend. Share your own code journey, edit existing entries, and manage data dynamically using secure REST API integrations!
+          </p>
+          <div className="pt-4 flex flex-wrap items-center justify-center gap-4">
+            <Button href="/stories">Open Story Hub</Button>
+            <Button href="/login" variant="secondary">
+              Sign In to Your Profile
+            </Button>
+          </div>
+        </div>
       </section>
     </div>
   );
